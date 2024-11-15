@@ -121,7 +121,7 @@ yeu_cau_nhap:
     la $a0, in_loi
     li $v0, 4
     syscall
-    j ket_thuc
+    j end
 
 kiem_tra_vitri_mang1:
     lw $t1, size1
@@ -140,7 +140,7 @@ lay_phan_tu_mang1:
     lw $a0, 0($t0)
     li $v0, 1
     syscall
-    j ket_thuc
+    j end
 
 lay_phan_tu_mang2:
     la $t0, array2
@@ -148,14 +148,14 @@ lay_phan_tu_mang2:
     lb $a0, 0($t0)
     li $v0, 1
     syscall
-    j ket_thuc
+    j end 
 
 in_loi_nhap:
     la $a0, in_loi
     li $v0, 4
     syscall
-    j ket_thuc
+    j end
 
-ket_thuc:
+end:
     li $v0, 10
     syscall
